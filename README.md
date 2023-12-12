@@ -2,7 +2,7 @@
 程式語言期末報告  
 ## 爬蟲抓取花語  
 [抓取目標網站](https://silviayellow.pixnet.net/blog/post/354111760)  
-程式碼:  
+## 爬蟲程式碼:  
 ```python
 #request 
 import csv
@@ -43,4 +43,33 @@ with open(csv_file_path, 'w', newline='', encoding='utf-8') as csvfile:
     csv_writer.writerows(new_list)
 
 print(f'CSV 文件已保存到 {csv_file_path}')
+```  
+## 搜尋程式碼:  
+```python
+import csv
+
+# 打開CSV文件
+with open('flowers_data.csv', 'r', encoding='utf-8') as file:
+    # 讀取CSV文件内容
+    csv_reader = csv.reader(file)
+    
+    # 初始化一个空字典
+    data = {}
+    
+    # 遍歷CSV文件的每一行
+    for row in csv_reader:
+        # 將第一个字段作為鍵，第三个字段作為值添加到字典中
+        data[row[1]] = row[3]
+# 獲取用户输入的搜尋文本
+searchtext = input("請輸入搜尋文本: ")
+findable = 0
+
+# 在字典的鍵中查找匹配項
+for flower_name in data.keys():
+    if searchtext == flower_name:
+        print(flower_name + ": " + data[flower_name])
+        findable = 1
+
+if findable == 0:
+    print("未找到花卉")
 ```
