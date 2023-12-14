@@ -1,0 +1,52 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-image: url('繡球花背景圖.jpg'); /* 替換 'your-image.jpg' 為你的圖片路徑 */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+#map-container {
+  position: relative;
+  height: 80vh; /* 使用視窗高度作為地圖容器的高度 */
+  
+  flex-direction: column;
+  padding: 0 40px;
+  
+  
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* 垂直居中 */
+  background-color: white;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-image: url('菊花.jpg'); /* 替換 'your-image.jpg' 為你的圖片路徑 */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  
+  
+}
+
+#header-left, #header-center, #header-right {
+  flex: 1;
+}
+
+#header-center {
+  text-align: center;
+}
+
+#header-right {
+  text-align: right;
+}
+
+#map {
+  flex: 1;
+}

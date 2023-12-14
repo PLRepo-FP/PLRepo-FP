@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>花店地圖</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+      #map {
+        height: 80vh;
+        border-radius: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <div id="map-container">
+      <div id="header">
+        <div id="header-left">
+          <h2></h2>
+        </div>
+        <div id="header-center">
+          <h1>花言巧語尋花圖</h1>
+        </div>
+        <div id="header-right">
+          <h5>點選圖例獲得更多資訊</h5>
+        </div>
+      </div>
+      
+      <div id="map"></div>
+
+    </div>
+
+    
+
+    <script>
+      var map;
+    </script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="main.js"></script> 
+    <!-- 引入 Google Maps JavaScript API，替換 YOUR_API_KEY -->
+    <script src="" async defer></script>
+  </body>
+</html>
