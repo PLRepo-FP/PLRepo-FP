@@ -1,0 +1,36 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-image: url('iStock-526494749.jpg'); /* 替換 'your-image.jpg' 為你的圖片路徑 */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;    
+
+  }
+  #header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* 垂直居中 */
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #a43a3a;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;      
+  }
+  h1 {
+    text-align: center;
+  }
+  form {
+    width: 30%; /* 設定表單寬度，你可以根據需要調整這個數值 */
+    margin: 0 auto; /* 設定左右外邊距為 auto，這會將表單置中 */
+  }
+  #search_content {
+    width: 600px;
+    height: 400px;
+    border-radius: 15px;
+    background-color: rgb(196, 28, 28);
+  }
+  

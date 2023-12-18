@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Flower Search</title>
+    <style>
+    body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-image: url('static/iStock-526494749.jpg'); /* 替換 'your-image.jpg' 為你的圖片路徑 */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;    
+
+  }
+  
+  #header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* 垂直居中 */
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border: 1px solid #ffffff;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;      
+  }
+  h1 {
+    text-align: center;
+    margin: 0; /* 清除標題的預設邊距 */
+  }
+  form {
+    width: 25%; /* 設定表單寬度，你可以根據需要調整這個數值 */
+    margin: 0 auto; /* 設定左右外邊距為 auto，這會將表單置中 */
+  }
+  #search_content {
+    width: 30%;
+    height: auto;
+    right:0;
+    max-height: 400px; /* 設置最大高度 */
+    border-radius: 15px;
+    background-color: rgb(235, 197, 197);
+    margin: 20px auto 0;
+    padding: 20px;
+    text-align: center;
+    overflow-y: auto; /* 或者使用 overflow-y: scroll; */
+    
+}
+    #flower-index {
+            width: 300px; /* 設定新區域的寬度，根據需要調整 */
+            height: 250px;
+            /*background-color: rgb(235, 197, 197);*/
+            margin-top: 20px;
+            margin-left: 20px;
+            border-radius: 10px; /* 設定圓角的半徑 */
+        }
+
+    #search_content h2 {
+    margin-top: -10px; /* 調整 margin-top 的值 */
+}
+    
+
+    #search_content li {
+        font-size: 18px; /* 調整字體大小的值 */
+        margin: 5px 0;
+    }
+    </style>
+</head>
+<body>
+    
+    <div id="header">
+        <h1>Floriography</h1>
+            <form action="/search" method="post">
+            <label for="search_text">搜尋花名：</label>
+            <input type="text" id="search_text" name="search_text" required>
+            <button type="submit">搜尋</button>
+        </form>
+        <h3>輸入花名或花語索引</h3>
+        {% if results %}
+        
+        </div>
+    
+
+    <div id="search_content">
+        <h2>搜尋結果：</h2>
+        <ul>
+            {% for result in results %}
+                <li>{{ result['花名'] }} : {{ result['花語'] }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+    <div id="flower-index">
+        <h2>花語索引 : </h2>
+        <h4>愛情，家庭，治癒</h4><h4>幸福，喜悅，新生活</h4><h4>友情，魅力，個性</h4><h4>感情，行為，其他</h4><h4><a href ="https://yoyoscott87.github.io/flower-map/">花店地圖</a></h4>
+    </div>
+</body>
+</html>
